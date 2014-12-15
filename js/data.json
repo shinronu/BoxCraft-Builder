@@ -1,0 +1,16 @@
+[
+  {
+    "product_type": "Geheugen",
+    "name": "1 GB DDR-333, geheugen",
+    "price": 27.0,
+    "amount": "1 GB",
+    "slots": 1,
+    "type": "DDR-333",
+    "id": "094f9ce92265c149d23f96d7787e66fddebbd222",
+    "manufacturer": "ADATA"
+  },
+  {"product_type": "Geheugen", "name": "1 GB DDR-400, geheugen", "price": 27.0, "amount": "1 GB", "slots": 1, "type": "DDR-400", "id": "e46bd6967b3b1dcf4e1d6b937f945589bd8e6c01", "manufacturer": "ADATA"},
+  {"product_type": "Geheugen", "name": "2 GB DDR-400 Kit, geheugen", "price": 51.0, "amount": "2 GB", "slots": 2, "type": "DDR-400", "id": "d59f7aa2402a181a2c35fa2fe2fd8dc57a99e375", "manufacturer": "ADATA"},
+  {"product_type": "Geheugen", "name": "1 GB DDR2-800, geheugen", "price": 19.0, "amount": "1 GB", "slots": 1, "type": "DDR2-800", "id": "a2c7c5edf47bcb38a7a9dadbc1ed042674a74a08", "manufacturer": "ADATA"}
+
+      ]
