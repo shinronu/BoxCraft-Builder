@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <title>Boxcraft Builder</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/boxcraft.css"/>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="css/boxcraft.css" rel="stylesheet"/>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <script src="bower_components/html5shiv/dist/html5shiv.min.js"></script>
     <![endif]-->
 </head>
 <body>
@@ -72,7 +73,7 @@
                 <div class="box">
                     <p class="opmaaknaam">Processor</p>
                     <img class="img-responsive" src="images/u69.png" alt="Processor"/>
-                    <a class="btn btn-primary spacefix" type="button" href="pages/processors.html">Selecteren</a>
+                    <a class="btn btn-primary spacefix" type="button" href="partials/processors.html">Selecteren</a>
                 </div>
             </div>
             <div class="col-md-1">
@@ -98,6 +99,7 @@
                     <img class="img-responsive" src="images/u89.png" alt="Harddisk"/>
                     <a class="btn btn-primary spacefix" type="button" href="#">Selecteren</a>
                 </div>
+            </div>
         </div>
         <!--3e rij componenten-->
         <div class="row">
@@ -125,6 +127,7 @@
                     <a class="btn btn-primary spacefix" type="button" href="#">Selecteren</a>
                 </div>
             </div>
+        </div>
     </div>
     <!--end content-->
 
@@ -137,7 +140,7 @@
                 <!--quote here?-->
                 <blockquote>
                     <p>
-                        &ldquo;Such quote, much inspiration...wow&rdquo;</p>
+                        &ldquo;Such quote, much inspiration...wow&rdquo;
                     </p>
                     <small>shinronu</small>
                 </blockquote>
@@ -167,7 +170,8 @@
     </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
 </body>
+</html>

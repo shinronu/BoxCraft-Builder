@@ -1,0 +1,19 @@
+{
+  "name": "BoxCraft-Builder",
+  "version": "1.0.0",
+  "description": "Building hardware components from a different vendors into a custom pc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shinronu/BoxCraft-Builder.git"
+  },
+  "author": "Erdi Erdal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shinronu/BoxCraft-Builder/issues"
+  },
+  "homepage": "https://github.com/shinronu/BoxCraft-Builder"
+}
