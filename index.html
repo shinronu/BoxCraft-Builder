@@ -17,9 +17,9 @@
         <script src="bower_components/modernizr/modernizr.js"></script>
         <script src="bower_components/html5shiv/dist/html5shiv.min.js"></script>
     <![endif]-->
-    <script src="../js/localstoragehandler.js"></script>
+    <script src="js/LocalStorageHandler.js"></script>
 </head>
-<body>
+<body onload="setLocalData()">
     <!--start van de navigatie-->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="navbar-header">
@@ -75,13 +75,15 @@
                     <p class="opmaaknaam">Processor</p>
                     <img class="img-responsive" src="images/u69.png" alt="Processor"/>
                     <a class="btn btn-primary spacefix" type="button" href="partials/processors.html">Selecteren</a>
+                    <div id="writeprocessor"></div>
                 </div>
             </div>
             <div class="col-md-1">
                 <div class="box">
                     <p class="opmaaknaam">Videokaart</p>
                     <img class="img-responsive" src="images/u79.png" alt="Videokaart"/>
-                    <a class="btn btn-primary spacefix" type="button" href="#">Selecteren</a>
+                    <a class="btn btn-primary spacefix" type="button" href="partials/videokaart.html">Selecteren</a>
+                    <div id="writevideokaart"></div>
                 </div>
             </div>
         </div>
@@ -91,14 +93,16 @@
                 <div class="box">
                     <p class="opmaaknaam">Behuizing</p>
                     <img class="img-responsive" src="images/u129.png" alt="Behuizing"/>
-                    <a class="btn btn-primary spacefix" type="button" href="#">Selecteren</a>
+                    <a class="btn btn-primary spacefix" type="button" href="partials/behuizing.html">Selecteren</a>
+                    <div id="writebehuizing"></div>
                 </div>
             </div>
             <div class="col-md-1 col-md-offset-2">
                 <div class="box">
                     <p class="opmaaknaam">Harddisk</p>
                     <img class="img-responsive" src="images/u89.png" alt="Harddisk"/>
-                    <a class="btn btn-primary spacefix" type="button" href="#">Selecteren</a>
+                    <a class="btn btn-primary spacefix" type="button" href="partials/harddisk.html">Selecteren</a>
+                    <div id="writeharddisk"></div>
                 </div>
             </div>
         </div>
@@ -108,14 +112,16 @@
                 <div class="box">
                     <p class="opmaaknaam">Geheugen</p>
                     <img class="img-responsive" src="images/u119.png" alt="Geheugen"/>
-                    <a class="btn btn-primary spacefix" type="button" href="#">Selecteren</a>
+                    <a class="btn btn-primary spacefix" type="button" href="partials/geheugen.html">Selecteren</a>
+                    <div id="writegeheugen"></div>
                 </div>
             </div>
             <div class="col-md-1 col-md-offset-2">
                 <div class="box">
                     <p class="opmaaknaam">Moederbord</p>
                     <img class="img-responsive" src="images/u99.png" alt="Moederbord"/>
-                    <a class="btn btn-primary spacefix" type="button" href="#">Selecteren</a>
+                    <a class="btn btn-primary spacefix" type="button" href="partials/moederboord.html">Selecteren</a>
+                    <div id="writemb"></div>
                 </div>
             </div>
         </div>
@@ -125,29 +131,16 @@
                 <div class="box">
                     <p class="opmaaknaam">Voeding</p>
                     <img class="img-responsive" src="images/u109.png" alt="Voeding"/>
-                    <a class="btn btn-primary spacefix" type="button" href="#">Selecteren</a>
+                    <a class="btn btn-primary spacefix" type="button" href="partials/voeding.html">Selecteren</a>
+                    <div id="writevoeding"></div>
                 </div>
             </div>
         </div>
     </div>
     <!--end content-->
+    <a class="btn btn-primary spacefix" href="#" type="button">Afrekenen</a>
 
-    <div class="info">
-        <div class="row">
-            <div class="col-sm-6 tabbable">
-                <!--tabs here?-->
-            </div>
-            <div class="col-sm-4 col-sm-offset-2">
-                <!--quote here?-->
-                <blockquote>
-                    <p>
-                        &ldquo;Such quote, much inspiration...wow&rdquo;
-                    </p>
-                    <small>shinronu</small>
-                </blockquote>
-            </div>
-        </div>
-    </div>
+
     <!--end info-->
 
     <div class="ftr">
@@ -157,7 +150,7 @@
                     <div class="pull-left ftr_space">
                         <address>
                             <h3>BoxCraft Inc.</h3>
-                            1337 woow road <br/>
+                            1234 subject road <br/>
                             <a href="mailto: 123@boxcraft.com">123@boxcraft.com</a>
                             <abbr title="Phone">P:</abbr>123456789
                         </address>

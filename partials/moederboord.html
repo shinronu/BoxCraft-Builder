@@ -47,27 +47,27 @@
     <!--end navigatie-->
 
     <div class="search">
-        <h1>Processors</h1>
+        <h1>Moederboorden</h1>
         <label>search: </label>
-        <input ng-model="query" placeholder="Search for Processors" autofocus>
+        <input ng-model="query" placeholder="Zoek voor moederboord" autofocus>
         <label class="formgroup">Manufacturer:
-            <select ng-model="ProcesorrFacturer">
+            <select ng-model="MoederboordFacturer">
                 <option value="name">Intel</option>
                 <option value="reknown">AMD</option>
             </select>
         </label>
     </div>
 
-    <div class="main" ng-controller="MyProcessorController">
+    <div class="main" ng-controller="MyMoederboordController">
         <ul class="resultlist">
-            <li class="item cf" ng-repeat="item in processor | limitTo: 10 |filter: query | orderBy: ProcesorrFacturer:descending">
+            <li class="item cf" ng-repeat="item in moederboord | limitTo: 10 |filter: query | orderBy: MoederboordFacturer:descending">
                 <img class="img-responsive item_image" ng-src="{{item.img_link}}" alt="{{item.name}}"/>
                 <div class="item_info">
                     <p id="itemname">{{item.manufacturer}} {{item.name}}</p>
                     <p>Price: €{{item.price}}</p>
+                    <p>Aantal USB poorten: {{item.usb_slots}}</p>
+                    <p>Max werkgeheugen: {{item.mem_max}}</p>
                     <p>Socket: {{item.socket}}</p>
-                    <p>Cores: {{item.cores}}</p>
-                    <p>Speed: {{item.speed}} Hz</p>
                     <p>Manufacturer: {{item.manufacturer}}</p>
                 <a href="../index.html" ng-click="addToLocalStorage(item.name)">toevoegen</a>
                 </div>
