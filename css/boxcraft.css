@@ -54,7 +54,6 @@ hr{
     margin-bottom:5px;
 }
 .info {
-    background: #ffa753 url(../images/info-background.png) repeat-x bottom ;
     margin-top: 50px;
     padding: 60px 0;
 }
@@ -90,4 +89,7 @@ hr{
     border-bottom: 1px solid black;
     background-color: grey;
     line-height:0.5em;
+}
+.content {
+    visibility: visible;
 }
