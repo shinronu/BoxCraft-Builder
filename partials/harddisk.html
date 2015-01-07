@@ -60,7 +60,7 @@
 
     <div class="main" ng-controller="MyHarddiskController">
         <ul class="resultlist">
-            <li class="item cf" ng-repeat="item in harddisk | limitTo: 10 |filter: query | orderBy: HarddiskFacturer:descending">
+            <li class="item cf" ng-repeat="item in items | limitTo: 10 |filter: query | orderBy: HarddiskFacturer:descending">
                 <img class="img-responsive item_image" ng-src="{{item.img_link}}" alt="{{item.name}}"/>
                 <div class="item_info">
                     <p id="itemname">{{item.manufacturer}} {{item.name}}</p>
@@ -69,7 +69,7 @@
                     <p>internal 35: {{item.internal_35}}</p>
                     <p>internal 25: {{item.internal_25}}</p>
                     <p>Manufacturer: {{item.manufacturer}}</p>
-                <a href="../index.html" ng-click="addToLocalStorage(item.name)">toevoegen</a>
+                <a href="../index.html" ng-click="addToLocalStorage(item.name, item.price)">toevoegen</a>
                 </div>
             </li>
         </ul>

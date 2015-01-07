@@ -60,16 +60,16 @@
 
     <div class="main" ng-controller="MyBehuizingController">
         <ul class="resultlist">
-            <li class="item cf" ng-repeat="item in behuizing | limitTo: 10 |filter: query | orderBy: BehuizingFacturer:descending">
+            <li class="item cf" ng-repeat="item in items | limitTo: 10 |filter: query | orderBy: BehuizingFacturer:descending">
                 <img class="img-responsive item_image" ng-src="{{item.img_link}}" alt="{{item.name}}"/>
                 <div class="item_info">
                     <p id="itemname">{{item.manufacturer}} {{item.name}}</p>
                     <p>Price: €{{item.price}}</p>
                     <p>Beschikbaren kleuren: {{item.color}}</p>
-                    <p>internal 35: {{item.internal_35}}</p>
-                    <p>internal 25: {{item.internal_25}}</p>
+                    <p>Interne 3,5 inch slots: {{item.internal_35}}</p>
+                    <p>interne 2,5 inch slots: {{item.internal_25}}</p>
                     <p>Manufacturer: {{item.manufacturer}}</p>
-                <a href="../index.html" ng-click="addToLocalStorage(item.name)">toevoegen</a>
+                <a href="../index.html" ng-click="addToLocalStorage(item.name, item.price)">toevoegen</a>
                 </div>
             </li>
         </ul>

@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="./images/favicon.ico"/>
     <!-- Bootstrap -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <!--Specifiek aangepaste elementen-->
     <link href="css/boxcraft.css" rel="stylesheet"/>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -17,7 +18,6 @@
         <script src="bower_components/modernizr/modernizr.js"></script>
         <script src="bower_components/html5shiv/dist/html5shiv.min.js"></script>
     <![endif]-->
-    <script src="js/LocalStorageHandler.js"></script>
 </head>
 <body onload="setLocalData()">
     <!--start van de navigatie-->
@@ -32,7 +32,7 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Contact</a></li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" href="#" data-toggle="dropdown">Social Media <b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -70,7 +70,15 @@
         </div>
         <!--1e rij componenten-->
         <div class="row">
-            <div class="col-md-1 col-md-offset-5">
+            <div class="col-md-1 col-md-offset-3 ">
+                <div class="boxbehuizing">
+                    <p class="opmaaknaam">Behuizing</p>
+                    <img class="img-responsive" src="images/u129.png" alt="Behuizing"/>
+                    <a class="btn btn-primary spacefix" type="button" href="partials/behuizing.html">Selecteren</a>
+                    <div id="writebehuizing"></div>
+                </div>
+            </div>
+            <div class="col-md-1 col-md-offset-1">
                 <div class="box">
                     <p class="opmaaknaam">Processor</p>
                     <img class="img-responsive" src="images/u69.png" alt="Processor"/>
@@ -86,18 +94,7 @@
                     <div id="writevideokaart"></div>
                 </div>
             </div>
-        </div>
-        <!--2e rij componenten-->
-        <div class="row">
-            <div class="col-md-1 col-md-offset-4">
-                <div class="box">
-                    <p class="opmaaknaam">Behuizing</p>
-                    <img class="img-responsive" src="images/u129.png" alt="Behuizing"/>
-                    <a class="btn btn-primary spacefix" type="button" href="partials/behuizing.html">Selecteren</a>
-                    <div id="writebehuizing"></div>
-                </div>
-            </div>
-            <div class="col-md-1 col-md-offset-2">
+            <div class="col-md-1">
                 <div class="box">
                     <p class="opmaaknaam">Harddisk</p>
                     <img class="img-responsive" src="images/u89.png" alt="Harddisk"/>
@@ -106,9 +103,9 @@
                 </div>
             </div>
         </div>
-        <!--3e rij componenten-->
+        <!--2e rij componenten-->
         <div class="row">
-            <div class="col-md-1 col-md-offset-4">
+            <div class="col-md-1 col-md-offset-5">
                 <div class="box">
                     <p class="opmaaknaam">Geheugen</p>
                     <img class="img-responsive" src="images/u119.png" alt="Geheugen"/>
@@ -116,7 +113,7 @@
                     <div id="writegeheugen"></div>
                 </div>
             </div>
-            <div class="col-md-1 col-md-offset-2">
+            <div class="col-md-1">
                 <div class="box">
                     <p class="opmaaknaam">Moederbord</p>
                     <img class="img-responsive" src="images/u99.png" alt="Moederbord"/>
@@ -124,10 +121,7 @@
                     <div id="writemb"></div>
                 </div>
             </div>
-        </div>
-        <!--4e rij componenten-->
-        <div class="row">
-            <div class="col-md-2 col-md-offset-5">
+            <div class="col-md-2">
                 <div class="box">
                     <p class="opmaaknaam">Voeding</p>
                     <img class="img-responsive" src="images/u109.png" alt="Voeding"/>
@@ -138,9 +132,7 @@
         </div>
     </div>
     <!--einde content-->
-    <a class="btn btn-primary spacefix" href="#" type="button">Afrekenen</a>
-
-
+    <a class="btn btn-primary" href="#" type="button">Afrekenen</a>
     <!--einde info-->
 
     <div class="ftr">
@@ -163,9 +155,12 @@
         </div>
     </div>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <!-- jQuery nodig voor bootstrap javascript plugins -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Hieronder is de gecompilede en geminifiede bootstrap script src die nodig is voor design aspecten-->
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <!--De javascript bestand dat nodig is om de gekozen keuzes te laten zien-->
+    <script src="js/LocalStorageHandler.js"></script>
 </body>
 </html>

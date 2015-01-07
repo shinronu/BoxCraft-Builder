@@ -29,14 +29,21 @@ hr{
 }
 
 .box {
-    border: 1px solid grey;
+    border: 0px solid grey;
     height: 150px;
     width: 100px;
 }
-
+.box a{
+    text-align: center;
+}
 .box img {
     margin: 0 auto;
     height: 75px;
+}
+.boxbehuizing {
+    margin: 0 auto;
+    width: 110px;
+    height: 150px ;
 }
 
 .opmaaknaam{
@@ -50,8 +57,7 @@ hr{
 
 .spacefix {
     width: 100%;
-    margin-top: 10px;
-    margin-bottom:5px;
+    margin-top: 5px;
 }
 .info {
     margin-top: 50px;

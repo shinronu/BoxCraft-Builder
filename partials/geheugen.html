@@ -15,9 +15,6 @@
         <script src="../bower_components/modernizr/modernizr.js"></script>
         <script src="../bower_components/html5shiv/dist/html5shiv.min.js"></script>
     <![endif]-->
-    <script src="../app/lib/angular.min.js"></script>
-    <script src="../app/controllers/partsController.js"></script>
-
 </head>
 <body>
     <!--start van de navigatie-->
@@ -60,7 +57,7 @@
 
     <div class="main" ng-controller="MyGeheugenController">
         <ul class="resultlist">
-            <li class="item cf" ng-repeat="item in geheugen | limitTo: 10 |filter: query | orderBy: GeheugenFacturer:descending">
+            <li class="item cf" ng-repeat="item in items | limitTo: 10 |filter: query | orderBy: GeheugenFacturer:descending">
                 <img class="img-responsive item_image" ng-src="{{item.img_link}}" alt="{{item.name}}"/>
                 <div class="item_info">
                     <p id="itemname">{{item.manufacturer}} {{item.name}}</p>
@@ -69,16 +66,16 @@
                     <p>Grootte: {{item.amount}}</p>
                     <p>Slots: {{item.slots}}</p>
                     <p>Manufacturer: {{item.manufacturer}}</p>
-                <a href="../index.html" ng-click="addToLocalStorage(item.name)">toevoegen</a>
+                <a href="../index.html" ng-click="addToLocalStorage(item.name, item.price)">toevoegen</a>
                 </div>
             </li>
         </ul>
     </div>
 
+    <script src="../app/lib/angular.min.js"></script>
     <!--Libraries-->
     <script src="../bower_components/angular/angular.min.js"></script>
-
     <!--Custom scripts-->
-    <script src="../app/app.js"></script>
+    <script src="../app/controllers/partsController.js"></script>
 </body>
 </html>

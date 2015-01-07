@@ -60,14 +60,14 @@
 
     <div class="main" ng-controller="MyVoedingController">
         <ul class="resultlist">
-            <li class="item cf" ng-repeat="item in voeding | limitTo: 10 |filter: query | orderBy: VoedingFacturer:descending">
+            <li class="item cf" ng-repeat="item in items | limitTo: 10 |filter: query | orderBy: VoedingFacturer:descending">
                 <img class="img-responsive item_image" ng-src="{{item.img_link}}" alt="{{item.name}}"/>
                 <div class="item_info">
                     <p id="itemname">{{item.manufacturer}} {{item.name}}</p>
                     <p>Price: €{{item.price}}</p>
                     <p>Stroom: {{item.power}}W</p>
                     <p>Manufacturer: {{item.manufacturer}}</p>
-                <a href="../index.html" ng-click="addToLocalStorage(item.name)">toevoegen</a>
+                <a href="../index.html" ng-click="addToLocalStorage(item.name, item.price)">toevoegen</a>
                 </div>
             </li>
         </ul>
