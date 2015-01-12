@@ -15,8 +15,6 @@
         <script src="../bower_components/modernizr/modernizr.js"></script>
         <script src="../bower_components/html5shiv/dist/html5shiv.min.js"></script>
     <![endif]-->
-    <script src="../app/lib/angular.min.js"></script>
-    <script src="../app/controllers/partsController.js"></script>
 
 </head>
 <body>
@@ -51,7 +49,7 @@
         <label>search: </label>
         <input ng-model="query" placeholder="Zoek voor voeding" autofocus>
         <label class="formgroup">Manufacturer:
-            <select ng-model="VoedingFacturer">
+            <select ng-model="BehuizingFacturer">
                 <option value="name">Intel</option>
                 <option value="reknown">AMD</option>
             </select>
@@ -60,7 +58,7 @@
 
     <div class="main" ng-controller="MyVoedingController">
         <ul class="resultlist">
-            <li class="item cf" ng-repeat="item in items | limitTo: 10 |filter: query | orderBy: VoedingFacturer:descending">
+            <li class="item cf" ng-repeat="item in items | limitTo: 10 |filter: query | orderBy: BehuizingFacturer:descending">
                 <img class="img-responsive item_image" ng-src="{{item.img_link}}" alt="{{item.name}}"/>
                 <div class="item_info">
                     <p id="itemname">{{item.manufacturer}} {{item.name}}</p>
@@ -75,8 +73,7 @@
 
     <!--Libraries-->
     <script src="../bower_components/angular/angular.min.js"></script>
-
     <!--Custom scripts-->
-    <script src="../app/app.js"></script>
+    <script src="../app/controllers/partsController.js"></script>
 </body>
 </html>
