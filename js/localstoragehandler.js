@@ -9,11 +9,20 @@ function setLocalData(){
         setLocalGeheugen();
         setLocalBehuizing();
         //setLocalHarddisk();
-        setLocalMoederboord();
+        setLocalMoederbord();
         setLocalVoeding();
         calculateSum();
     }
 }
+function placeLocalData(IdText, IdTextKey, IdImage, IdImageKey){
+    if(IdTextKey!=null) {
+        document.getElementById(IdText).innerHTML = window.localStorage.getItem(IdTextKey);
+    }
+    if (IdImageKey!=null) {
+        document.getElementById(IdImage).src = window.localStorage.getItem(IdImageKey);
+    }
+}
+
 function getComponentPrijs(KEY){
     var itemPrice;
     var itemPriceString;
@@ -25,31 +34,31 @@ function getComponentPrijs(KEY){
 }
 
 function setLocalProcessor() {
-    document.getElementById('writeprocessor').innerHTML = window.localStorage.getItem("Processor");
+    placeLocalData('writeProcessor', 'Processor', 'writeProcessorImage', 'ProcessorImage');
     getComponentPrijs("ProcessorPrijs");
 }
 function setLocalVideokaart(){
-    document.getElementById('writevideokaart').innerHTML = window.localStorage.getItem("Videokaart");
+    placeLocalData('writeVideokaart', 'Videokaart', 'writeVideokaartImage', 'VideokaartImage');
     getComponentPrijs("VideokaartPrijs");
 }
 function setLocalGeheugen(){
-    document.getElementById('writegeheugen').innerHTML = window.localStorage.getItem("Geheugen");
+    placeLocalData('writeGeheugen', 'Geheugen', 'writeGeheugenImage', 'GeheugenImage');
     getComponentPrijs("GeheugenPrijs");
 }
 function setLocalBehuizing(){
-    document.getElementById('writebehuizing').innerHTML = window.localStorage.getItem("Behuizing");
+    placeLocalData('writeBehuizing', 'Behuizing', 'writeBehuizingImage', 'BehuizingImage');
     getComponentPrijs("BehuizingPrijs");
 }
 function setLocalHarddisk(){
-    document.getElementById('writehardisk').innerHTML = window.localStorage.getItem("Harddisk");
+    placeLocalData('writeHarddisk', 'Harddisk', 'writeHarddiskImage', 'HarddiskImage');
     getComponentPrijs("HarddiskPrijs");
 }
-function setLocalMoederboord(){
-    document.getElementById('writemb').innerHTML = window.localStorage.getItem("Moederboord");
-    getComponentPrijs("MoederboordPrijs");
+function setLocalMoederbord(){
+    placeLocalData('writeMoederbord', 'Moederbord', 'writeMoederbordImage', 'MoederbordImage');
+    getComponentPrijs("MoederbordPrijs");
 }
 function setLocalVoeding(){
-    document.getElementById('writevoeding').innerHTML = window.localStorage.getItem("Voeding");
+    placeLocalData('writeVoeding', 'Voeding', 'writeVoedingImage', 'VoedingImage');
     getComponentPrijs("VoedingPrijs");
 }
 function calculateSum(){
