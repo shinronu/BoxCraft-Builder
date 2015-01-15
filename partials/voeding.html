@@ -12,68 +12,68 @@
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="../bower_components/modernizr/modernizr.js"></script>
-        <script src="../bower_components/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../bower_components/modernizr/modernizr.js"></script>
+    <script src="../bower_components/html5shiv/dist/html5shiv.min.js"></script>
     <![endif]-->
 
 </head>
 <body>
-    <!--start van de navigatie-->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle Navigation</span>
-                <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-            </button>
-            <a href="../index.html" class="navbar-brand">Boxcraft Builder</a>
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="#">Contact</a></li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Social Media <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="http://www.facebook.com">Facebook</a></li>
-                        <li><a href="http://www.twitter.com">Twitter</a></li>
-                        <li><a href="http://www.plus.google.com">Google+</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!--end navigatie-->
-
-    <div class="search">
-        <h1>Voeding</h1>
-        <label>search: </label>
-        <input ng-model="query" placeholder="Zoek voor voeding" autofocus>
-        <label class="formgroup">Manufacturer:
-            <select ng-model="BehuizingFacturer">
-                <option value="name">Intel</option>
-                <option value="reknown">AMD</option>
-            </select>
-        </label>
+<!--start van de navigatie-->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+        <a href="../index.html" class="navbar-brand">Boxcraft Builder</a>
     </div>
-
-    <div class="main" ng-controller="MyVoedingController">
-        <ul class="resultlist">
-            <li class="item cf" ng-repeat="item in items | limitTo: 10 |filter: query | orderBy: BehuizingFacturer:descending">
-                <img class="img-responsive item_image" ng-src="{{item.img_link}}" alt="{{item.name}}"/>
-                <div class="item_info">
-                    <p id="itemname">{{item.manufacturer}} {{item.name}}</p>
-                    <p>Price: €{{item.price}}</p>
-                    <p>Stroom: {{item.power}}W</p>
-                    <p>Manufacturer: {{item.manufacturer}}</p>
-                <a href="../index.html" ng-click="addToLocalStorage(item.name, item.price, item.img_link)">toevoegen</a>
-                </div>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" href="#" data-toggle="dropdown">Social Media <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="http://www.facebook.com">Facebook</a></li>
+                    <li><a href="http://www.twitter.com">Twitter</a></li>
+                    <li><a href="http://www.plus.google.com">Google+</a></li>
+                </ul>
             </li>
         </ul>
     </div>
+</nav>
+<!--end navigatie-->
 
-    <!--Libraries-->
-    <script src="../bower_components/angular/angular.min.js"></script>
-    <!--Custom scripts-->
-    <script src="../app/controllers/partsController.js"></script>
+<div class="search">
+    <h1>Voeding</h1>
+    <label>search: </label>
+    <input ng-model="query" placeholder="Zoek voor voeding" autofocus>
+    <label class="formgroup">Manufacturer:
+        <select ng-model="BehuizingFacturer">
+            <option value="name">Intel</option>
+            <option value="reknown">AMD</option>
+        </select>
+    </label>
+</div>
+
+<div class="main" ng-controller="MyVoedingController">
+    <ul class="resultlist">
+        <li class="item cf" ng-repeat="item in items | limitTo: 10 |filter: query | orderBy: BehuizingFacturer:descending">
+            <img class="img-responsive item_image" ng-src="{{item.img_link}}" alt="{{item.name}}"/>
+            <div class="item_info">
+                <p id="itemname">{{item.manufacturer}} {{item.name}}</p>
+                <p>Price: €{{item.price}}</p>
+                <p>Stroom: {{item.power}}W</p>
+                <p>Manufacturer: {{item.manufacturer}}</p>
+                <a href="../index.html" ng-click="addToLocalStorage(item.name, item.price, item.img_link)">toevoegen</a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!--Libraries-->
+<script src="../bower_components/angular/angular.min.js"></script>
+<!--Custom scripts-->
+<script src="../app/controllers/partsController.js"></script>
 </body>
 </html>

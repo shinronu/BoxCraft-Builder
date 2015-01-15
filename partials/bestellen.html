@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Boxcraft Builder</title>
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <!-- Bootstrap -->
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <!--Specifiek aangepaste elementen-->
+    <link href="../css/boxcraft.css" rel="stylesheet"/>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="../bower_components/modernizr/modernizr.js"></script>
+    <script src="../bower_components/html5shiv/dist/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body onload="setAllComponentPrice()">
+<!--start van de navigatie-->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+        <a href="../index.html" class="navbar-brand">Boxcraft Builder</a>
+    </div>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" href="#" data-toggle="dropdown">Social Media <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="http://facebook.com">Facebook</a></li>
+                    <li><a href="http://twitter.com">Twitter</a></li>
+                    <li><a href="http://plus.google.com">Google+</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--einde navigatie-->
+
+<div class="intro-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-3">
+                <img class="img-responsive" src="../images/logo.png" alt="Logo bovenaan"/>
+            </div>
+            <div class="col-xs-9">
+                <h1>Overzicht <span class="text-muted">&raquo; Bestel hier uw setup</span></h1>
+                <p class="lead">Hieronder vindt u een overzicht van de door u gekozen componenten.
+                    Deze kunt u vervolgens bestellen via onze website.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<table class="table">
+    <thead>
+    <tr>
+        <td>Afbeelding</td>
+        <td>Productnaam</td>
+        <td>Prijs</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><img class="img-responsive" id="writeBehuizingImage" src=""/></td>
+        <td id="writeBehuizing"></td>
+        <td><div id="BehuizingPrijs"></div></td>
+    </tr>
+    <tr>
+        <td><img class="img-responsive" id="writeProcessorImage" src=""/></td>
+        <td id="writeProcessor"></td>
+        <td id="ProcessorPrijs"></td>
+    </tr>
+    <tr>
+        <td><img class="img-responsive" id="writeVideokaartImage" src=""/></td>
+        <td id="writeVideokaart"></td>
+        <td id="VideokaartPrijs"></td>
+    </tr>
+    <tr>
+        <td><img class="img-responsive" id="writeHarddiskImage" src=""/></td>
+        <td id="writeHarddisk"></td>
+        <td id="HarddiskPrijs"></td>
+    </tr>
+    <tr>
+        <td><img class="img-responsive" id="writeGeheugenImage" src=""/></td>
+        <td id="writeGeheugen"></td>
+        <td id="GeheugenPrijs"></td>
+    </tr>
+
+    <tr>
+        <td><img class="img-responsive" id="writeMoederbordImage" src=""/></td>
+        <td id="writeMoederbord"></td>
+        <td id="MoederbordPrijs"></td>
+    </tr>
+
+    <tr>
+        <td><img class="img-responsive" id="writeVoedingImage" src=""/></td>
+        <td id="writeVoeding"></td>
+        <td id="VoedingPrijs"></td>
+    </tr>
+    </tbody>
+</table>
+<!--einde intro block-->
+<div id="totaalprijs"></div>
+<script src="../bower_components/angular/angular.js"></script>
+<!-- jQuery nodig voor bootstrap javascript plugins -->
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Hieronder is de gecompilede en geminifiede bootstrap script src die nodig is voor design aspecten-->
+<script src="../bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+<!--De javascript bestand dat nodig is om de gekozen keuzes te laten zien-->
+<script src="../js/localstoragehandler.js"></script>
+<!--Javascript bestand nodig voor het plaatsen van prijzen op deze pagina-->
+<script src="../js/bestelPriceHandler.js"></script>
+</body>
+</html>

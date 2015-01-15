@@ -42,7 +42,7 @@ hr{
 }
 .boxbehuizing {
     margin: 0 auto;
-    width: 110px;
+    width: 216px;
     height: 150px ;
 }
 
@@ -57,6 +57,9 @@ hr{
 
 .spacefix {
     width: 100%;
+    margin-top: 5px;
+}
+.topfix {
     margin-top: 5px;
 }
 .info {
@@ -98,4 +101,10 @@ hr{
 }
 .content {
     visibility: visible;
+}
+body {
+    background-color: #4e91ff;
+}
+.panel-heading {
+    font-size: large;
 }

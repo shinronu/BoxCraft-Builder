@@ -54,7 +54,7 @@ myApp.controller('MyVideoController', ['$scope', '$http', function($scope, $http
 myApp.controller('MyHarddiskController', ['$scope', '$http', function($scope, $http) {
     $http.get(BEHUIZING_URL).success(function(data) {
         $scope.items = data;
-        saveToLocalStorage('Harddisk','HarddiskPrijs' , 'HarddiskImage', $scope);
+        saveToLocalStorage('Harddisk','HarddiskPrijs','HarddiskImage', $scope);
     });
 }]);
 //einde van harddisk controller
