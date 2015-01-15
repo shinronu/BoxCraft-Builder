@@ -3,35 +3,33 @@
  */
 // hier wordt een array gemaakt waar component prijzen in worden opgeslagen
 var componenten = [];
-// hier initialize we de int variable Sum waar we de totaalwaarde in gaan opslaan
-var Sum = 0;
-// in deze variable komt de int van de prijs
-var itemPrice;
-// deze variable hebben we nodig om de string versie van de int op te slaan
-var itemPriceString;
+var IdTextArray = ['Behuizing','Processor','Videokaart','Harddisk','Geheugen','Moederbord','Behuizing'];
+var IdImageArray = ['BehuizingImage','ProcessorImage','VideokaartImage','HarddiskImage'
+    ,'GeheugenImage','MoederbordImage','BehuizingImage'];
+var IdPriceArray = ['BehuizingPrijs','ProcessorPrijs', 'VideokaartPrijs', 'HarddiskPrijs',
+    'GeheugenPrijs', 'MoederbordPrijs', 'VoedingPrijs'];
+
+var Sum = 0;  // hier initialize we de int variable Sum waar we de totaalwaarde in gaan opslaan
+var itemPrice;  // in deze variable komt de int van de prijs
+var itemPriceString;  // deze variable hebben we nodig om de string versie van de int op te slaan
+
 // de volgende functions worden direct uitgevoerd wanneer de pagina klaar is met laden
 (function(){
-    setLocalProcessor();
-    setLocalVideokaart();
-    setLocalGeheugen();
-    setLocalBehuizing();
-    //setLocalHarddisk();
-    setLocalMoederbord();
-    setLocalVoeding();
     setAllComponentData();
     calculateSum();
 })();
+
 // deze functie bepaalt waar welke info verwerkt en geplaatst moet worden
-// de functie heeft 5 variables nodig. IdText geeft de id van een div terug waar de IdTextKey(de value) in komt te staan
-// hetzelfde geldt voor IdImage met IdImageKey
+// de functie heeft 3 variables nodig. IdText geeft de id van een div de value in komt te staan
+// hetzelfde geldt voor IdImage
 // IdPrice zal gebruikt worden om de prijs van een products te verwerken
-function placeLocalData(IdText, IdTextKey, IdImage, IdImageKey, IdPriceKey){
+function placeLocalData(IdText, IdImage, IdPriceKey){
     // hier wordt er vertelt welke localstorage key nodig is en waar het verwerkt moet worden
-    document.getElementById(IdText).innerHTML = window.localStorage.getItem(IdTextKey);
+    document.getElementById(IdText).innerHTML = window.localStorage.getItem(IdText);
     // deze if statement zorgt ervoor dat de source van de plaatjes pas worden aangepast als deze niet leeg zijn.
-    if (localStorage.getItem(IdImageKey) !==null) {
+    if (localStorage.getItem(IdImage) !==null) {
         //hier wordt beschreven welke source van een id met bijbehorende data gewijzigd moet worden.
-        document.getElementById(IdImage).src = window.localStorage.getItem(IdImageKey);
+        document.getElementById(IdImage).src = window.localStorage.getItem(IdImage);
     }
     // dezelfde soort controle wordt uitgevoerd voor de prijs.
     if(window.localStorage.getItem(IdPriceKey)!=null){
@@ -56,30 +54,7 @@ function calculateSum(){
     document.getElementById('totaalprijs').innerHTML = SumString;
 }
 function setAllComponentData(){
-    for(var i=0; i<array.length;i++){
-        placeLocalData()
+    for(var i=0; i<IdTextArray.length;i++){
+        placeLocalData(IdTextArray[i],IdImageArray[i],IdPriceArray[i]);
     }
-}
-
-function setLocalBehuizing(){
-    placeLocalData('writeBehuizing', 'Behuizing', 'writeBehuizingImage', 'BehuizingImage', 'BehuizingPrijs');
-}
-function setLocalProcessor() {
-    // de implementatie van placelocaldata
-    placeLocalData('writeProcessor', 'Processor', 'writeProcessorImage', 'ProcessorImage', 'ProcessorPrijs');
-}
-function setLocalVideokaart(){
-    placeLocalData('writeVideokaart', 'Videokaart', 'writeVideokaartImage', 'VideokaartImage', 'VideokaartPrijs');
-}
-function setLocalHarddisk(){
-    placeLocalData('writeHarddisk', 'Harddisk', 'writeHarddiskImage', 'HarddiskImage', 'HarddiskPrijs');
-}
-function setLocalGeheugen(){
-    placeLocalData('writeGeheugen', 'Geheugen', 'writeGeheugenImage', 'GeheugenImage', 'GeheugenPrijs');
-}
-function setLocalMoederbord(){
-    placeLocalData('writeMoederbord', 'Moederbord', 'writeMoederbordImage', 'MoederbordImage', 'MoederbordPrijs');
-}
-function setLocalVoeding(){
-    placeLocalData('writeVoeding', 'Voeding', 'writeVoedingImage', 'VoedingImage','VoedingPrijs');
 }
