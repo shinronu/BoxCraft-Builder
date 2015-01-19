@@ -1,10 +1,10 @@
 /**
  * Created by Erdierdal-laptop on 15-12-2014.
  */
-function HomePageSetter(){// de volgende functions worden direct uitgevoerd wanneer de pagina klaar is met laden
+function homePageSetter(){// de volgende functions worden direct uitgevoerd wanneer de pagina klaar is met laden
     setAllImages();
 }
-function BestelPageSetter(){
+function bestelPageSetter(){
     arrayPriceHandler();
     setAllComponentData();
     calculateSum();
