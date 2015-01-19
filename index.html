@@ -15,158 +15,157 @@
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="bower_components/modernizr/modernizr.js"></script>
-        <script src="bower_components/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/html5shiv/dist/html5shiv.min.js"></script>
     <![endif]-->
 </head>
-<body ng-app>
-    <!--start van de navigatie-->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle Navigation</span>
-                <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-            </button>
-            <a href="index.html" class="navbar-brand">Boxcraft Builder</a>
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="#">Contact</a></li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Social Media <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="http://facebook.com">Facebook</a></li>
-                        <li><a href="http://twitter.com">Twitter</a></li>
-                        <li><a href="http://plus.google.com">Google+</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!--einde navigatie-->
+<body onload="HomePageSetter()">
+<!--start van de navigatie-->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+        <a href="index.html" class="navbar-brand">Boxcraft Builder</a>
+    </div>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" href="#" data-toggle="dropdown">Social Media <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="http://facebook.com">Facebook</a></li>
+                    <li><a href="http://twitter.com">Twitter</a></li>
+                    <li><a href="http://plus.google.com">Google+</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--einde navigatie-->
 
-    <div class="intro-block">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-3">
-                    <img class="img-responsive" src="images/logo.png" alt="Logo bovenaan"/>
-                </div>
-                <div class="col-xs-9">
-                    <h1>Boxcraft Builder<span class="text-muted">&raquo; Assemble your own computer!</span></h1>
-                        <p class="lead">Boxcraft builder is a website where you can assemble you
-                            own personal computer which you may buy later on.</p>
-                </div>
+<div class="intro-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-3">
+                <img class="img-responsive" src="images/logo.png" alt="Logo bovenaan"/>
+            </div>
+            <div class="col-xs-9">
+                <h1>Boxcraft Builder<span class="text-muted">&raquo; Assemble your own computer!</span></h1>
+                <p class="lead">Boxcraft builder is a website where you can assemble you
+                    own personal computer which you may buy later on.</p>
             </div>
         </div>
     </div>
-    <!--einde intro block-->
-    <div class="content">
-        <div class="row">
-            <div class="col-xs-12">
-                <h3 class="contentdesign">Assemble your own computer here!</h3><hr>
+</div>
+<!--einde intro block-->
+<div class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <h3 class="contentdesign">Assemble your own computer here!</h3><hr>
+        </div>
+    </div>
+    <!--1e rij onderdelen-->
+    <!--De Behuizing-->
+    <div class="row">
+        <div class="col-md-1 col-md-offset-3 ">
+            <div class="boxbehuizing">
+                <p class="opmaaknaam">Behuizing</p>
+                <img class="img-responsive topfix" id="BehuizingImage" src="images/u129.png" alt="Behuizing"/>
+                <a class="btn btn-primary spacefix" type="button" href="partials/behuizing.html" >Selecteren</a>
+                <div id="Behuizing"></div>
             </div>
         </div>
-        <!--1e rij componenten-->
-        <!--De Behuizing-->
-        <div class="row">
-            <div class="col-md-1 col-md-offset-3 ">
-                <div class="boxbehuizing">
-                    <p class="opmaaknaam">Behuizing</p>
-                    <img class="img-responsive topfix" id="BehuizingImage" src="images/u129.png" alt="Behuizing"/>
-                    <a class="btn btn-primary spacefix" type="button" href="partials/behuizing.html" >Selecteren</a>
-                    <div id="Behuizing"></div>
-                </div>
-            </div>
-            <!--overige componenten in normale grootte-->
-            <div class="col-md-1 col-md-offset-1">
-                <div class="box">
-                    <p class="opmaaknaam">Processor</p>
-                    <img class="img-responsive" id="ProcessorImage" src="images/u69.png" alt="Processor"/>
-                    <a class="btn btn-primary spacefix" type="button" href="partials/processors.html">Selecteren</a>
-                    <div id="Processor"></div>
-                </div>
-            </div>
-            <div class="col-md-1">
-                <div class="box">
-                    <p class="opmaaknaam">Videokaart</p>
-                    <img class="img-responsive" id="VideokaartImage" src="images/u79.png" alt="Videokaart"/>
-                    <a class="btn btn-primary spacefix" type="button" href="partials/videokaart.html">Selecteren</a>
-                    <div id="Videokaart"></div>
-                </div>
-            </div>
-            <div class="col-md-1">
-                <div class="box">
-                    <p class="opmaaknaam">Harddisk</p>
-                    <img class="img-responsive" id="HarddiskImage" src="images/u89.png" alt="Harddisk"/>
-                    <a class="btn btn-primary spacefix" type="button" href="partials/harddisk.html">Selecteren</a>
-                    <div id="Harddisk"></div>
-                </div>
+        <!--overige onderdelen in normale grootte-->
+        <div class="col-md-1 col-md-offset-1">
+            <div class="box">
+                <p class="opmaaknaam">Processor</p>
+                <img class="img-responsive" id="ProcessorImage" src="images/u69.png" alt="Processor"/>
+                <a class="btn btn-primary spacefix" type="button" href="partials/processors.html">Selecteren</a>
+                <div id="Processor"></div>
             </div>
         </div>
-        <!--2e rij componenten-->
-        <div class="row">
-            <div class="col-md-1 col-md-offset-5">
-                <div class="box">
-                    <p class="opmaaknaam">Geheugen</p>
-                    <img class="img-responsive" id="GeheugenImage" src="images/u119.png" alt="Geheugen"/>
-                    <a class="btn btn-primary spacefix" type="button" href="partials/geheugen.html">Selecteren</a>
-                    <div id="Geheugen"></div>
-                </div>
-            </div>
-            <div class="col-md-1">
-                <div class="box">
-                    <p class="opmaaknaam">Moederbord</p>
-                    <img class="img-responsive" id="MoederbordImage" src="images/u99.png" alt="Moederbord"/>
-                    <a class="btn btn-primary spacefix" type="button" href="partials/moederbord.html">Selecteren</a>
-                    <div id="Moederbord"></div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="box">
-                    <p class="opmaaknaam">Voeding</p>
-                    <img class="img-responsive" id="VoedingImage" src="images/u109.png" alt="Voeding"/>
-                    <a class="btn btn-primary spacefix" type="button" href="partials/voeding.html">Selecteren</a>
-                    <div id="Voeding"></div>
-                </div>
+        <div class="col-md-1">
+            <div class="box">
+                <p class="opmaaknaam">Videokaart</p>
+                <img class="img-responsive" id="VideokaartImage" src="images/u79.png" alt="Videokaart"/>
+                <a class="btn btn-primary spacefix" type="button" href="partials/videokaart.html">Selecteren</a>
+                <div id="Videokaart"></div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-2 col-md-offset-5">
-                <a class="btn btn-primary spacefix" href="partials/bestellen.html" type="button">Bestellen</a>
+        <div class="col-md-1">
+            <div class="box">
+                <p class="opmaaknaam">Harddisk</p>
+                <img class="img-responsive" id="HarddiskImage" src="images/u89.png" alt="Harddisk"/>
+                <a class="btn btn-primary spacefix" type="button" href="partials/harddisk.html">Selecteren</a>
+                <div id="Harddisk"></div>
             </div>
         </div>
     </div>
-    <!--einde content-->
-    <div id="totaalprijs"></div>
-    <!--einde info-->
-
-    <div class="ftr">
-        <div class="container">
-            <div class="row">
-                <footer>
-                    <div class="pull-left ftr_space">
-                        <address>
-                            <h3>BoxCraft Inc.</h3>
-                            1234 subject road <br/>
-                            <a href="mailto: 123@boxcraft.com">123@boxcraft.com</a>
-                            <abbr title="Phone">P:</abbr>123456789
-                        </address>
-                    </div>
-                    <div class="pull-right ftr_space">
-                        <img class="img-responsive" src="images/logo.png" alt="logo onderaan"/>
-                    </div>
-                </footer>
+    <!--2e rij onderdelen-->
+    <div class="row">
+        <div class="col-md-1 col-md-offset-5">
+            <div class="box">
+                <p class="opmaaknaam">Geheugen</p>
+                <img class="img-responsive" id="GeheugenImage" src="images/u119.png" alt="Geheugen"/>
+                <a class="btn btn-primary spacefix" type="button" href="partials/geheugen.html">Selecteren</a>
+                <div id="Geheugen"></div>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="box">
+                <p class="opmaaknaam">Moederbord</p>
+                <img class="img-responsive" id="MoederbordImage" src="images/u99.png" alt="Moederbord"/>
+                <a class="btn btn-primary spacefix" type="button" href="partials/moederbord.html">Selecteren</a>
+                <div id="Moederbord"></div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="box">
+                <p class="opmaaknaam">Voeding</p>
+                <img class="img-responsive" id="VoedingImage" src="images/u109.png" alt="Voeding"/>
+                <a class="btn btn-primary spacefix" type="button" href="partials/voeding.html">Selecteren</a>
+                <div id="Voeding"></div>
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-2 col-md-offset-5">
+            <a class="btn btn-primary spacefix" href="partials/bestellen.html" type="button">Bestellen</a>
+        </div>
+    </div>
+</div>
+<!--einde content-->
+<div class="ftr">
+    <div class="container">
+        <div class="row">
+            <footer>
+                <div class="pull-left ftr_space">
+                    <address>
+                        <h3>BoxCraft Inc.</h3>
+                        1234 subject road <br/>
+                        <a href="mailto: 123@boxcraft.com">123@boxcraft.com</a>
+                        <abbr title="Phone">P:</abbr>123456789
+                    </address>
+                </div>
+                <div class="pull-right ftr_space">
+                    <img class="img-responsive" src="images/logo.png" alt="logo onderaan"/>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
 
-    <script src="bower_components/angular/angular.js"></script>
-    <!-- jQuery nodig voor bootstrap javascript plugins -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Hieronder is de gecompilede en geminifiede bootstrap script src die nodig is voor design aspecten-->
-    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
-    <!--De javascript bestand dat nodig is om de gekozen keuzes te laten zien-->
-    <script src="js/localstoragehandler.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<!-- jQuery nodig voor bootstrap javascript plugins -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Hieronder is de gecompilede en geminifiede bootstrap script src die nodig is voor design aspecten-->
+<script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+<!--De javascript bestand dat nodig is om de gekozen keuzes te laten zien-->
+<script src="js/localStorageHandler.js"></script>
+<!--Javascript file die alle arrays bevat om data te parsen-->
+<script src="js/arrayHandler.js"></script>
 </body>
 </html>

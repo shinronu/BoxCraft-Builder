@@ -8,22 +8,6 @@ const MOEDERBOORD_URL = 'https://api.mongolab.com/api/1/databases/boxcraft_hardw
 const VOEDING_URL = 'https://api.mongolab.com/api/1/databases/boxcraft_hardware_components/collections/voedingen/?apiKey=3l8YogXApuPUFwSzFuW0Z8WrBf3pMwTQ';
 const HARDDISK_URL = '';
 
-function saveToLocalStorage (LSKEY, LSKEY2, LSKEY3, $scope) {
-    $scope.addToLocalStorage = function (LSVALUE, LSVALUE2, LSVALUE3) {
-        // De functie zorgt ervoor dat er 2 custom values worden meegegeven, hierdoor kan er met
-        // één klik twee waardes opgeslagen worden naam en prijs van het product
-        localStorage.setItem(LSKEY, LSVALUE);
-        localStorage.setItem(LSKEY2, LSVALUE2);
-        localStorage.setItem(LSKEY3, LSVALUE3);
-        // Het opslaan van de meegekregen values naar de local storage
-        document.getElementById(LSKEY).innerHTML = localStorage.getItem("ItemName");
-        document.getElementById(LSKEY2).innerHTML = localStorage.getItem("ItemName");
-        document.getElementById(LSKEY3).innerHTML = localStorage.getItem("ItemName");
-        //het oplaan van de gekozen specifieke artikel, dit wordt gebruikt om de
-        // gemaakte keuzes te laten zien
-    }
-}
-
 myApp.controller('MyGeheugenController', ['$scope', '$http', function($scope, $http) {
     $http.get(GEHEUGEN_URL).success(function(data) {
         //ophalen van juiste soort artikellen vanuit database
