@@ -62,7 +62,7 @@ myApp.controller('MyVoedingController', ['$scope', '$http', function($scope, $ht
 myApp.controller('MyBehuizingController', ['$scope', '$http', function($scope, $http) {
     $http.get(BEHUIZING_URL).success(function(data) {
         $scope.items = data;
-        saveToLocalStorage('Behuizing','BehuizingPrijs', 'BehuizingImage', $scope);
+        saveToLocalStorage('Behuizing', 'BehuizingPrijs', 'BehuizingImage'. $scope);
     });
 }]);
 //einde van Behuizing controller
