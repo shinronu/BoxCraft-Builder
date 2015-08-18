@@ -1,0 +1,14 @@
+.thumbnail {
+    height: 100%;
+}
+.thumbnail .img-link {
+    display: inline-flex;
+    height: 50%;
+    padding: 10%;
+}
+.thumbnail .img-link img {
+    display: table-cell;
+    vertical-align: middle;
+    height: 230px;
+    width: auto;
+}

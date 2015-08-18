@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Boxcraft Builder</title>
+    <link rel="shortcut icon" href="images/favicon.ico"/>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/Bootflat/bootflat/css/bootflat.css">
+    <link rel="stylesheet" href="css/equal-height-columns.css"/>
+    <!-- Custom -->
+    <link rel="stylesheet" href="css/common.css"/>
+    <link href="css/overview.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/listings.css"/>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <script src="bower_components/html5shiv/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body ng-app="boxCraftApp">
+<!--start navigatie-->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+        <a href="/" class="navbar-brand">Boxcraft Builder</a>
+        <button type="button" class="btn btn-primary navbar-btn pull-right">Aanmelden</button>
+        <button type="button" class="btn btn-danger navbar-btn pull-right">Inloggen</button>
+    </div>
+</nav>
+<!--einde navigatie-->
+
+<div ng-view></div>
+
+<!--Libraries-->
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="bower_components/Bootflat/js/jquery-1.10.1.min.js"></script>
+<script src="bower_components/Bootflat/bootflat/js/icheck.min.js"></script>
+<script src="bower_components/Bootflat/bootflat/js/jquery.fs.selecter.min.js"></script>
+<script src="bower_components/Bootflat/bootflat/js/jquery.fs.stepper.min.js"></script>
+
+<!--Initialisatie-->
+<script src="app/app.js"></script>
+<script src="app/config.js"></script>
+<script src="app/services/routingService.js"></script>
+
+<!--Applicatiecontrollers-->
+<script src="app/controllers/listController.js"></script>
+<script src="app/controllers/overviewController.js"></script>
+</body>
+</html>

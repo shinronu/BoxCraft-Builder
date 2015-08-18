@@ -1,0 +1,14 @@
+body {
+    padding-top: 70px;
+    background-color: #D2E0E6;
+}
+.tpad {
+    margin: 1em;
+}
+.navbar-header {
+    margin-left: 5px;
+    width: 100%;
+}
+.navbar-header button {
+    margin-right: 15px;
+}

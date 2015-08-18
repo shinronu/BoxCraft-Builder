@@ -1,0 +1,34 @@
+<div class="container" ng-controller="listController as vm">
+    <div ng-include src="'partials/pagination.html'"></div>
+    <table class="table table-responsive table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Fabrikant</th>
+                <th>Naam</th>
+                <th>Prijs</th>
+                <th>Formfactor</th>
+                <th>Socket</th>
+                <th>SATA sloten</th>
+                <th>USB sloten</th>
+                <th>Maximaal geheugen</th>
+                <th>Aantal geheugen sloten</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="item cf"
+                ng-repeat="item in vm.product">
+                <td>{{ item.manufacturer }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.price | currency: "€ "}}</td>
+                <td>{{ item.formfactor }}</td>
+                <td>{{ item.socket }}</td>
+                <td>{{ item.sata_slots }}</td>
+                <td>{{ item.usb_slots }}</td>
+                <td>{{ item.mem_max }}</td>
+                <td>{{ item.mem_slots }}</td>
+                <td><a class="btn btn-primary" href="../index.html" ng-click="vm.store(item)">toevoegen</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <div ng-include src="'partials/pagination.html'"></div>
+</div>
